@@ -14,7 +14,7 @@
 ## Installation & Usage
 
 ```shell
-make
+bundle exec install
 ```
 
 For more details, see above.
