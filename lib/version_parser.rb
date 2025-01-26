@@ -2,10 +2,9 @@
 
 Version = Struct.new(:major, :minor, :patch, :prename, :preversion)
 
+# Parses a module semantic version
 module VersionParser
   def self.parse(version)
-    _ = 0
-
     main_version, prerelease = version.split('-')
 
     main_parts = main_version.split('.').map(&:to_i)
