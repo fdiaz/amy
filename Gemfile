@@ -3,6 +3,6 @@
 source 'https://rubygems.org'
 
 gem 'amyf'
-gem 'rake' 
+gem 'rake'
 gem 'rspec'
 gem 'rubocop'
