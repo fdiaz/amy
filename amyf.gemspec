@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |s|
-  s.name = 'amy'
+  s.name = 'amyf'
   s.version   = '0.1.0'
   s.platform  = Gem::Platform::RUBY
   s.summary   = 'Helps with daily tasks'
@@ -13,5 +13,5 @@ Gem::Specification.new do |s|
   s.files     = Dir.glob('{lib,bin}/**/*')
   s.require_path = 'lib'
   s.required_ruby_version = '>= 3.3.0'
-  s.executables = ['amy']
+  s.executables = ['amyf']
 end
