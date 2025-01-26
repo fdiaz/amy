@@ -10,11 +10,15 @@ end
 
 task default: :spec
 
-# Install the gem locally
 desc 'Install the gem locally'
 task install: :build do
   sh 'gem build amyf.gemspec'
   sh "gem install amyf-#{gem_version}.gem"
+end
+
+desc 'Cleans up the local pkg'
+task :clean do
+  rm_rf 'pkg'
 end
 
 def gem_version

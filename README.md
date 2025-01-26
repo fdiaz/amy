@@ -17,6 +17,12 @@
 gem install amyf
 ```
 
+### Dev
+
+```shell
+bundle exec rake install
+```
+
 For more details, see above.
 
 ---
