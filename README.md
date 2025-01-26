@@ -14,7 +14,7 @@
 ## Installation & Usage
 
 ```shell
-bundle exec install
+gem install amyf
 ```
 
 For more details, see above.
