@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/MethodLength
+
 require 'optparse'
 require 'battlestation'
 
 # Stops to smells the roses
 module Amy
-  # rubocop:disable Metrics/MethodLength
   def self.hello_world
     options = {}
     OptionParser.new do |opts|
@@ -17,17 +18,15 @@ module Amy
       end
     end.parse!
 
-    return unless options[:battleship] == true
-
-    Battlestation.new.setup
+    Battlestation.new.setup if options[:battleship] == true
   end
-  # rubocop:enable Metrics/MethodLength
-  
+
   def cat_art
     <<~CAT
        /\_/\
       ( o.o )    Hi.
-       > ^ <    
+       > ^ <    Dance break?
     CAT
   end
 end
+# rubocop:enable Metrics/MethodLength
