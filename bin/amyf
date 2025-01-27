@@ -2,4 +2,4 @@
 # frozen_string_literal: true
 
 require 'amyf'
-puts Amy.hello_world
+puts Amy.meditate

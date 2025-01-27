@@ -1,18 +1,19 @@
 # frozen_string_literal: true
 
-# rubocop:disable Metrics/MethodLength
-
 require 'optparse'
 require 'battlestation'
 
 # Stops to smells the roses
 module Amy
-  def self.hello_world
+  # Meditate.
+  # Medicate.
+  # Meditate.
+  def self.meditate
     options = {}
     OptionParser.new do |opts|
       opts.banner = cat_art
       opts.on('--battleship', 'Laptop setup') { |o| options[:battleship] = o }
-      opts.on('-h', '--help', 'I need sombody') do
+      opts.on('-h', '--help', 'I need somebody (not just anybody)') do
         puts opts
         exit
       end
@@ -21,12 +22,13 @@ module Amy
     Battlestation.new.setup if options[:battleship] == true
   end
 
-  def cat_art
+  def self.cat_art
     <<~CAT
-       /\_/\
-      ( o.o )    Hi.
-       > ^ <    Dance break?
+      -----------------------
+         /\\_/\\
+        ( o.o )   dance
+         > ^ <      break  ?
+      -----------------------
     CAT
   end
 end
-# rubocop:enable Metrics/MethodLength
