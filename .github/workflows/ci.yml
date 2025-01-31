@@ -21,4 +21,4 @@ jobs:
       - name: Run tests
         run: bundle exec rake
       - name: Run linter
-        run: bundle exec lint
+        run: bundle exec rake lint
