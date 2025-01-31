@@ -27,11 +27,13 @@ class Battlestation
     $CHILD_STATUS.exitstatus
   end
 
-  def cat_art
+  def self.cat_art
     <<~CAT
-       /\_/\
-      ( o.o )    All done!
-       > ^ <    Reopen the terminal
+      ----------------------------------
+         /\\_/\\
+        ( o.o )   reopen your terminal
+         > ^ <      bai  !
+      ----------------------------------
     CAT
   end
 end

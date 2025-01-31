@@ -16,9 +16,9 @@ task install: :build do
   sh "gem install amyf-#{gem_version}.gem"
 end
 
-desc 'Cleans up the local pkg'
-task :clean do
-  rm_rf 'pkg'
+desc 'Lints the project. What are we? Cavemen? Clean your dishes!'
+task :lint do
+  sh 'rubocop --fail-level A'
 end
 
 def gem_version
