@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Version = Struct.new(:major, :minor, :patch, :prename, :preversion)
+require_relative 'version'
 
 # Parses a module semantic version
 module VersionParser
