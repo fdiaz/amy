@@ -9,6 +9,7 @@ module Amy
   # Meditate.
   # Medicate.
   # Meditate.
+  # - IDLES
   def self.meditate
     options = {}
     OptionParser.new do |opts|
