@@ -42,10 +42,11 @@ task :release_unsafe do
   sh "git commit -m 'Update gem version to #{gem_version}'"
   sh "git tag -a #{gem_version} -m 'Update gem version to #{gem_version}'"
   sh 'git push'
+  sh 'git push --tags'
 
   sh "gem push amyf-#{gem_version}.gem"
 
-  puts "✅ New gem version #{new_version} released successfully"
+  puts "✅ New gem version #{gem_version} released successfully"
 end
 
 private
