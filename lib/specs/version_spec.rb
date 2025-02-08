@@ -44,22 +44,29 @@ RSpec.describe Version do
   describe '#bump_minor' do
     it 'increments the minor version by 1' do
       version = described_class.new(1, 2, 3).bump_minor
-      expect(version.to_h).to eq described_class.new(1, 3, 3).to_h
+      expect(version.to_h).to eq described_class.new(1, 3, 0).to_h
     end
 
     it 'handles single-digit minor versions correctly' do
       version = described_class.new(2, 0, 5).bump_minor
-      expect(version.to_h).to eq described_class.new(2, 1, 5).to_h
+      expect(version.to_h).to eq described_class.new(2, 1, 0).to_h
     end
 
     it 'handles larger minor numbers correctly' do
       version = described_class.new(5, 99, 10).bump_minor
-      expect(version.to_h).to eq described_class.new(5, 100, 10).to_h
+      expect(version.to_h).to eq described_class.new(5, 100, 0).to_h
     end
 
     it 'works with prerelease version' do
       version = described_class.new(5, 99, 10, 'beta', 2).bump_minor
-      expect(version.to_h).to eq described_class.new(5, 100, 10, 'beta', 2).to_h
+      expect(version.to_h).to eq described_class.new(5, 100, 0, 'beta', nil).to_h
+    end
+  end
+
+  describe '#bump_prerelease' do
+    it 'bumps a prerelease with no version' do
+      version = described_class.new(1, 2, 3, 'beta', nil).bump_prerelease
+      expect(version.to_h).to eq described_class.new(1, 2, 3, 'beta', 1).to_h
     end
   end
 end
