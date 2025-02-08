@@ -3,7 +3,7 @@
 require 'rspec'
 require_relative '../version'
 
-RSpec.describe Version do
+RSpec.describe VersionParser::Version do
   describe '#to_s' do
     it 'converts a simple version without prerelease info' do
       version = described_class.new(1, 2, 3)

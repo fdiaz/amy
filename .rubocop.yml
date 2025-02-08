@@ -11,3 +11,5 @@ Metrics/MethodLength:
   Enabled: false
 Gemspec/RequireMFA:
   Enabled: false
+RSpec/SpecFilePathFormat:
+  Enabled: false
