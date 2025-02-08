@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'amyf'
-  s.version   = '0.3.0'
+  s.version   = '0.4.0'
   s.platform  = Gem::Platform::RUBY
   s.summary   = 'Helps with daily tasks'
   s.description = 'Impossible to live without it'
