@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'amyf'
-  s.version   = '0.1.0'
+  s.version   = '0.4.0'
   s.platform  = Gem::Platform::RUBY
   s.summary   = 'Helps with daily tasks'
   s.description = 'Impossible to live without it'
@@ -14,5 +14,5 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.required_ruby_version = '>= 3.3.0'
   s.executables = ['amyf']
-  s.metadata['rubygems_mfa_required'] = 'true'
+  s.metadata['rubygems_mfa_required'] = 'false'
 end
