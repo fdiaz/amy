@@ -19,8 +19,11 @@ class Battlestation
     system 'brew install rbenv'
     system 'rbenv init'
 
-    Log.ingo 'installing oh-my-zsh'
+    Log.info 'installing oh-my-zsh'
     system 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+
+    Log.info 'setting xcode defaults'
+    system 'defaults write com.apple.dt.Xcode IDETemplateOptionsDefaultsKey -dict-add "header" ""'
 
     Log.success(cat_art)
 
